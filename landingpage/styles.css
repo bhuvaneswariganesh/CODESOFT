@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+}
+
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background-color: #444;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.btn[data-action="operator"] {
+    background-color: #e8491d;
+}
+
+.btn[data-action="operator"]:hover {
+    background-color: #c73710;
+}
+
+.btn[data-action="equals"] {
+    grid-column: span 2;
+    background-color: #4caf50;
+}
+
+.btn[data-action="equals"]:hover {
+    background-color: #45a049;
+}
+
+.btn[data-action="clear"], .btn[data-action="delete"] {
+    background-color: #d9534f;
+}
+
+.btn[data-action="clear"]:hover, .btn[data-action="delete"]:hover {
+    background-color: #c9302c;
+}
